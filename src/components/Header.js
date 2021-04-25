@@ -4,8 +4,36 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src='/images/logo.svg' alt='Disney+' />
+        <a href='/'>
+          <img src='/images/logo.svg' alt='Disney+' />
+        </a>
       </Logo>
+      <NavMenu>
+        <a href='/home'>
+          <img src='/images/home-icon.svg' alt='HOME' />
+          <span>HOME</span>
+        </a>
+        <a href='/search'>
+          <img src='/images/search-icon.svg' alt='SEARCH' />
+          <span>SEARCH</span>
+        </a>
+        <a href='/watchlist'>
+          <img src='/images/watchlist-icon.svg' alt='WATCHLIST' />
+          <span>WATCHLIST</span>
+        </a>
+        <a href='/originals'>
+          <img src='/images/original-icon.svg' alt='ORIGINALS' />
+          <span>ORIGINALS</span>
+        </a>
+        <a href='/movies'>
+          <img src='/images/movie-icon.svg' alt='MOVIES' />
+          <span>MOVIES</span>
+        </a>
+        <a href='/series'>
+          <img src='/images/series-icon.svg' alt='SERIES' />
+          <span>SERIES</span>
+        </a>
+      </NavMenu>
     </Nav>
   )
 }
@@ -37,6 +65,70 @@ const Logo = styled.a`
   img {
     width: 100%;
     display: block;
+  }
+`
+
+const NavMenu = styled.div`
+  height: 100%;
+  margin-right: auto;
+  margin-left: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  a {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 20px;
+      min-width: 20px;
+      width: 20px;
+      z-index: auto;
+      margin-right: 5px;
+    }
+
+    span {
+      padding: 2px 0px;
+      position: relative;
+      font-size: 13px;
+      letter-spacing: 1.42px;
+      line-height: 1.08;
+      white-space: nowrap;
+      color: rgb(249, 249, 249);
+
+      &:before {
+        content: '';
+        width: auto;
+        height: 2px;
+        position: absolute;
+        bottom: -6px;
+        left: 0px;
+        right: 0px;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgb(249, 249, 249);
+        border-radius: 0px 0px 4px 4px;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+      }
+    }
+
+    &:hover {
+      span:before {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `
 
