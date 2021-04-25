@@ -34,6 +34,7 @@ const Header = (props) => {
           <span>SERIES</span>
         </a>
       </NavMenu>
+      <Login>Login</Login>
     </Nav>
   )
 }
@@ -129,6 +130,22 @@ const NavMenu = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
+`
+
+const Login = styled.a`
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    color: #000;
+    background-color: #f9f9f9;
+    border-color: transparent;
   }
 `
 
