@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
 const Header = (props) => {
-  return <Nav></Nav>
+  return (
+    <Nav>
+      <Logo>
+        <img src='/images/logo.svg' alt='Disney+' />
+      </Logo>
+    </Nav>
+  )
 }
 
 const Nav = styled.nav`
@@ -18,6 +24,20 @@ const Nav = styled.nav`
   z-index: 3;
   background-color: #090b13;
   letter-spacing: 16px;
+`
+
+const Logo = styled.a`
+  width: 80px;
+  max-height: 70px;
+  padding: 0;
+  margin-top: 4px;
+  display: inline-block;
+  font-size: 0;
+
+  img {
+    width: 100%;
+    display: block;
+  }
 `
 
 export default Header
