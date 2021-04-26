@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useEffect, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { auth, provider } from '../firebase'
@@ -10,22 +11,33 @@ import {
 } from '../features/user/userSlice'
 
 const Header = (props) => {
-
   const dispatch = useDispatch()
   const history = useHistory()
 
   const userName = useSelector(selectUserName)
   const userPhoto = useSelector(selectUserPhoto)
 
-  const setUser = (user) => {
-    dispatch(
-      setUserLoginDetails({
-        name: user.displayName,
-        email: user.email,
-        photo: user.photoURL
-      })
-    )
-  }
+  const setUser = useCallback(
+    (user) => {
+      dispatch(
+        setUserLoginDetails({
+          name: user.displayName,
+          email: user.email,
+          photo: user.photoURL
+        })
+      )
+    },
+    [dispatch]
+  )
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setUser(user)
+        history.push('/home')
+      }
+    })
+  }, [setUser, history])
 
   const handleAuth = () => {
     if (!userName) {
@@ -237,7 +249,7 @@ const SignOut = styled.div`
     height: 100%;
     border-radius: 50%;
   }
-  
+
   &:hover {
     ${DropDown} {
       opacity: 1;
