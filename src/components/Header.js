@@ -67,30 +67,30 @@ const Header = (props) => {
       ) : (
         <>
           <NavMenu>
-            <a href='/home'>
+            <div>
               <img src='/images/home-icon.svg' alt='HOME' />
               <span>HOME</span>
-            </a>
-            <a href='/home'>
+            </div>
+            <div>
               <img src='/images/search-icon.svg' alt='SEARCH' />
               <span>SEARCH</span>
-            </a>
-            <a href='/home'>
+            </div>
+            <div>
               <img src='/images/watchlist-icon.svg' alt='WATCHLIST' />
               <span>WATCHLIST</span>
-            </a>
-            <a href='/home'>
+            </div>
+            <div>
               <img src='/images/original-icon.svg' alt='ORIGINALS' />
               <span>ORIGINALS</span>
-            </a>
-            <a href='/home'>
+            </div>
+            <div>
               <img src='/images/movie-icon.svg' alt='MOVIES' />
               <span>MOVIES</span>
-            </a>
-            <a href='/home'>
+            </div>
+            <div>
               <img src='/images/series-icon.svg' alt='SERIES' />
               <span>SERIES</span>
-            </a>
+            </div>
           </NavMenu>
           <SignOut>
             <UserImg src={userPhoto} alt={userName} />
@@ -127,6 +127,7 @@ const Logo = styled.a`
   margin-top: 4px;
   display: inline-block;
   font-size: 0;
+  cursor: pointer;
 
   img {
     width: 100%;
@@ -144,10 +145,11 @@ const NavMenu = styled.div`
   justify-content: flex-end;
   position: relative;
 
-  a {
+  div {
     padding: 0 12px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     img {
       height: 20px;
