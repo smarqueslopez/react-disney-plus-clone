@@ -6,23 +6,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project is deployed at https://react-disney-plus-clone.vercel.app/
 
-Login screen
+### Login screen
 
 <img src="./docs/Screenshot1.png?raw=true" width="100%" alt="Screenshot1.png"></img>
 
-Home screen
+### Home screen
 
 <img src="./docs/Screenshot2.png?raw=true" width="100%" alt="Screenshot2.png"></img>
 
-Slider
+### Slider
 
 <img src="./docs/Slider.gif?raw=true" width="100%" alt="Slider.gif"></img>
 
-Animated Buttons
+### Animated Buttons
 
 <img src="./docs/AnimatedButtons.gif?raw=true" width="100%" alt="AnimatedButtons.gif"></img>
 
-Detail screen
+### Detail screen
 
 <img src="./docs/Screenshot3.png?raw=true" width="100%" alt="Screenshot3.png"></img>
 
