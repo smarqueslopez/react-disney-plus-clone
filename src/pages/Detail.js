@@ -78,16 +78,13 @@ const Background = styled.div`
   img {
     width: 100vw;
     height: 100vh;
-
-    @media (max-width: 768px) {
-      width: initial;
-    }
+    object-fit: cover;
   }
 `
 
 const ImageTitle = styled.div`
   width: 100%;
-  height: 30vw;
+  height: 25vw;
   min-height: 170px;
   padding-bottom: 24px;
   margin: 0px auto;
