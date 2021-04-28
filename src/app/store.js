@@ -1,6 +1,6 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import userReducer from '../features/user/userSlice'
-import movieReducer from '../features/movie/movieSlice'
+import userReducer from './feature/user/userSlice'
+import movieReducer from './feature/movie/movieSlice'
 
 export default configureStore({
   reducer: {
