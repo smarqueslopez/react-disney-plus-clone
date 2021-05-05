@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a clone Disney+ web responsive-design interface using React.js, Redux, Styled-components and firebase database.
+This is a clone Disney+ web responsive-design interface using [React.js](www.google.es), [Redux](https://redux.js.org/), [Styled-components](https://styled-components.com/) and [firebase](https://firebase.google.com/) database.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
